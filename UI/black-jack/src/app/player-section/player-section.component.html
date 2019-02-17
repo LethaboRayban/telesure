@@ -1,0 +1,49 @@
+<div class="flex-container">
+  <div class="playerArea">
+    <div class="playerName">
+      <p>Player Name: {{ this.player1.name }}</p>
+    </div>
+    <div class="cardArea">
+      <ng-container *ngFor="let card of player1.cards">
+        <app-card [Card]="card" [isStand]="this.isStand"></app-card>
+      </ng-container>
+    </div>
+    <div class="scoreBoard">
+      <div><span class="scoreBoardText">Score:</span> {{ this.player1.score }}</div>
+
+      <div><span class="scoreBoardText">Status:</span> {{ this.player1.status }}</div>
+    </div>
+  </div>
+
+  <div class="playerArea">
+      <div class="playerName">
+          <p>Player Name: {{ this.player2.name }}</p>
+        </div>
+    <div class="cardArea">
+      <ng-container *ngFor="let card of player2.cards">
+        <app-card [Card]="card" [isStand]="this.isStand"></app-card>
+      </ng-container>
+    </div>
+    <div class="scoreBoard">
+        <div><span class="scoreBoardText">Score:</span> {{ this.player2.score }}</div>
+
+        <div><span class="scoreBoardText">Status:</span> {{ this.player2.status }}</div>
+      </div>
+  </div>
+
+  <div class="playerArea">
+      <div class="playerName">
+          <p>Player Name: {{ this.player3.name }}</p>
+        </div>
+    <div class="cardArea">
+      <ng-container *ngFor="let card of player3.cards">
+        <app-card [Card]="card" [isStand]="this.isStand"></app-card>
+      </ng-container>
+    </div>
+    <div class="scoreBoard">
+        <div><span class="scoreBoardText">Score:</span> {{ this.player3.score }}</div>
+
+        <div><span class="scoreBoardText">Status:</span> {{ this.player3.status }}</div>
+      </div>
+  </div>
+</div>

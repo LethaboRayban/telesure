@@ -1,0 +1,25 @@
+<div *ngIf="this.isGameStart" class="board">
+  <div class="boardRow">
+    <app-player-section
+      [player1]="players[0]"
+      [player2]="players[1]"
+      [player3]="players[2]"
+      [isStand]="isStand"
+    ></app-player-section>
+
+    <div class="boardRow">
+        <button *ngIf="!isStandButtonClicked" mat-raised-button color="warn" (click)="standAll()" style="width: 100%">
+          <span> Stand All</span>
+        </button>
+      </div>
+</div>
+</div>
+
+<div *ngIf="!this.isGameStart" class="board">
+  <div class="center boardRow">
+    <button class="startButton" mat-raised-button color="warn" (click)="play()">
+      <img class="startButtonImage" src="../../assets/start_logo.jpg" />
+      <span class="startButtonText">Start Game</span>
+    </button>
+  </div>
+</div>
