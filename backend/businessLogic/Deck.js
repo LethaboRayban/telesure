@@ -2,21 +2,7 @@
 
 let _c = require("./Card");
 const suits = ["s", "h", "d", "c"];
-const ranks = [
-  "A",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "J",
-  "Q",
-  "K"
-];
+const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 class Deck {
   constructor() {
@@ -53,9 +39,7 @@ class Deck {
     }
   }
 
-  deal() {
-    return this.cards.shift(); //remove card from top of deck
-  }
+  
 
   getCards() {
     return this.cards;
